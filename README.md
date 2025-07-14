@@ -11,17 +11,15 @@ The goal of this project was to perform exploratory data analysis (EDA) on a rea
 ## 🛠 Tools & Techniques
 
 - **Language:** R
-- **Libraries:** `ggplot2`, `dplyr`, `tidyr`, `readr`, `sf`, `tmap`, `lubridate`
+- **Libraries:** [Installed Packages](https://github.com/GordonOboh/conus-realestate-eda/blob/master/installed_packages.csv)
+- **Dataset:** [USA Housing Listings on Kaggle](https://www.kaggle.com/datasets/austinreese/usa-housing-listings)
 - **Techniques:** 
   - Data wrangling and transformation
   - Outlier detection and missing value treatment
   - Summary statistics and correlation analysis
   - Geospatial visualization
-  - Trend and pattern identification
-
 
 ## 🔍 Key Insights
-
 - Regional price variation between coastal and inland areas
 - Correlation between housing price and factors like square footage, region, and property type
 
