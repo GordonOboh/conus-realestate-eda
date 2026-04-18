@@ -31,7 +31,7 @@ This project explores rental listing data from across the Continental United Sta
 
 **Source:** [USA Housing Listings — Kaggle](https://www.kaggle.com/datasets/austinreese/usa-housing-listings)
 
-Craigslist rental listings scraped from across the U.S., containing ~700,000 raw records with variables including:
+Craigslist rental listings scraped from across the U.S., containing 384977 raw records with variables including:
 
 | Variable | Description |
 |---|---|
