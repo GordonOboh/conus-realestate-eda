@@ -184,6 +184,86 @@ Off-street and carport parking make up the majority of arrangements, together ac
 
 ---
 
+## Code Highlights
+
+### IQR-Based Outlier Removal (grouped by rental type)
+
+```r
+remove_outliers_multi <- function(df, columns, group_col) {
+  df %>%
+    group_by(across(all_of(group_col))) %>%
+    filter({
+      conditions <- lapply(columns, function(col) {
+        Q1 <- quantile(get(col), 0.25, na.rm = TRUE)
+        Q3 <- quantile(get(col), 0.75, na.rm = TRUE)
+        IQR <- Q3 - Q1
+        get(col) >= Q1 - 1.5 * IQR & get(col) <= Q3 + 1.5 * IQR
+      })
+      Reduce(`&`, conditions)
+    }) %>%
+    ungroup()
+}
+
+df_housing_cleaned <- remove_outliers_multi(
+  df      = df_housing_vars_of_interest,
+  columns = c("price", "sqfeet", "beds", "baths"),
+  group_col = "type"
+)
+```
+
+### Black-Themed ggplot2 Boxplot
+
+```r
+ggplot(df_housing_cleaned, aes(x = type, y = price, fill = type)) +
+  geom_boxplot(outlier.color = "red", outlier.size = 2, alpha = 0.8, color = "white") +
+  scale_fill_viridis_d(option = "C", begin = 0.2, end = 0.8) +
+  labs(
+    title = "Boxplot of Price grouped by Type of Rental",
+    x = "Type of Rental", y = "Price ($)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title      = element_text(color = "white", size = 14, face = "bold"),
+    axis.title      = element_text(color = "white", size = 12),
+    axis.text       = element_text(color = "white", size = 10),
+    axis.text.x     = element_text(angle = 45, hjust = 1),
+    legend.text     = element_text(color = "white"),
+    legend.title    = element_text(color = "white", face = "bold"),
+    plot.background = element_rect(fill = "black", color = NA),
+    panel.background= element_rect(fill = "black", color = NA),
+    panel.grid.major= element_line(color = "gray30", size = 0.5)
+  )
+```
+
+### Geospatial Overlay with Stadia Maps
+
+```r
+register_stadiamaps(key = Sys.getenv("STADIA_API_KEY"))
+
+bbox     <- c(left = -155, bottom = 20, right = -50, top = 66)
+base_map <- get_stadiamap(bbox = bbox, zoom = 6, maptype = "stamen_toner")
+
+ggmap(base_map) +
+  geom_point(
+    data  = df_housing_cleaned,
+    aes(x = long, y = lat, color = sqfeet),
+    alpha = 0.3, size = 2
+  ) +
+  scale_color_viridis_c() +
+  labs(
+    title = "Property Size Distribution across CONUS",
+    x = "Longitude", y = "Latitude", color = "Area (Sq Feet)"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title      = element_text(color = "white", size = 14, face = "bold"),
+    plot.background = element_rect(fill = "black", color = NA),
+    panel.background= element_rect(fill = "black", color = NA)
+  )
+```
+
+---
+
 ## Tools & Techniques
 
 **Language:** R
