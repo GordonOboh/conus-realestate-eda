@@ -1,5 +1,8 @@
 # CONUS Real Estate EDA
 
+![R](https://img.shields.io/badge/R-4.x-276DC3?logo=r&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > Exploratory data analysis of U.S. rental listings across the Continental United States, built with R.
 
 ---
