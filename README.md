@@ -61,7 +61,7 @@ The dataset is heavily dominated by **Apartment** listings (~300,000), reflectin
 
 | All Rental Types | Excluding Apartments |
 |---|---|
-| ![Distribution of listings by type](plots_resized_720p/image2-fs8.png) | ![Distribution of listings by type (excl. Apartment)](plots_resized_720p/image1-fs8.png) |
+| <img src="plots/image2.png" width="460"> | <img src="plots/image1.png" width="460"> |
 
 ---
 
@@ -71,13 +71,13 @@ The dataset is heavily dominated by **Apartment** listings (~300,000), reflectin
 
 Assisted Living and Flat listings command notably higher median rents, while Manufactured homes sit at the lower end of the price spectrum.
 
-![Boxplot of Price grouped by Type of Rental](plots_resized_720p/image8-fs8.png)
+<img src="plots/image8.png" width="900">
 
 ### Price Distribution
 
 After IQR-based outlier removal, the price distribution is right-skewed — the majority of listings fall in the $500–$2,000/month range.
 
-![Distribution of Prices](plots_resized_720p/image4-fs8.png)
+<img src="plots/image4.png" width="900">
 
 ### Price vs. Square Footage
 
@@ -85,7 +85,7 @@ There is a moderate positive correlation between price and area. Listings colore
 
 | By State | With Trend Line |
 |---|---|
-| ![Price vs Area by State](plots_resized_720p/image9-fs8.png) | ![Scatterplot of price vs sqfeet](plots_resized_720p/image24-fs8.png) |
+| <img src="plots/image9.png" width="460"> | <img src="plots/image24.png" width="460"> |
 
 ---
 
@@ -95,13 +95,13 @@ There is a moderate positive correlation between price and area. Listings colore
 
 Houses and Assisted Living units have the largest median square footage. Cottage/Cabin and In-Law units are the most compact.
 
-![Boxplot of Property Size grouped by Type of Rental](plots_resized_720p/image7-fs8.png)
+<img src="plots/image7.png" width="900">
 
 ### Area Distribution
 
 Rental property sizes follow a right-skewed distribution, with most listings between 500–1,500 sq ft.
 
-![Distribution of Area](plots_resized_720p/image3-fs8.png)
+<img src="plots/image3.png" width="900">
 
 ### Beds and Baths Distribution
 
@@ -109,7 +109,7 @@ Most rentals are 1–2 bed / 1–2 bath units, consistent with the apartment-hea
 
 | Beds | Baths |
 |---|---|
-| ![Distribution of Beds](plots_resized_720p/image5-fs8.png) | ![Distribution of Baths](plots_resized_720p/image6-fs8.png) |
+| <img src="plots/image5.png" width="460"> | <img src="plots/image6.png" width="460"> |
 
 ---
 
@@ -119,13 +119,13 @@ Most rentals are 1–2 bed / 1–2 bath units, consistent with the apartment-hea
 
 Rental prices vary significantly by region. Coastal metro areas (California, Northeast corridor) exhibit the highest average rents, while the interior South and Midwest are considerably more affordable.
 
-![Price Distribution across CONUS](plots_resized_720p/image21-fs8.png)
+<img src="plots/image21.png" width="900">
 
 ### Average Price per Region
 
 Aggregating by geographic cluster makes the coastal vs. inland pricing disparity clear.
 
-![Average Price per Region](plots_resized_720p/image20-fs8.png)
+<img src="plots/image20.png" width="900">
 
 ### Average Property Size per Region
 
@@ -133,7 +133,7 @@ Interior regions (Midwest, South) tend to offer larger rentals at lower prices �
 
 | Sq Ft per Region | Price per Region (detail) |
 |---|---|
-| ![Average sqfeet per region](plots_resized_720p/image22-fs8.png) | ![Price per region detail](plots_resized_720p/image23-fs8.png) |
+| <img src="plots/image22.png" width="460"> | <img src="plots/image23.png" width="460"> |
 
 ---
 
@@ -145,7 +145,7 @@ Pet-friendly listings are common — nearly three-quarters of listings allow cat
 
 | Cats Allowed | Dogs Allowed |
 |---|---|
-| ![Cats Allowed](plots_resized_720p/image10-fs8.png) | ![Dogs Allowed](plots_resized_720p/image11-fs8.png) |
+| <img src="plots/image10.png" width="460"> | <img src="plots/image11.png" width="460"> |
 
 *74.2% of listings allow cats · 72.1% allow dogs*
 
@@ -155,11 +155,11 @@ Smoking is almost universally prohibited. EV charging stations and wheelchair ac
 
 | Smoking Allowed | Wheelchair Accessible |
 |---|---|
-| ![Smoking Allowed](plots_resized_720p/image12-fs8.png) | ![Wheelchair Access](plots_resized_720p/image18-fs8.png) |
+| <img src="plots/image12.png" width="460"> | <img src="plots/image18.png" width="460"> |
 
 | EV Charging | Comes Furnished |
 |---|---|
-| ![EV Charging](plots_resized_720p/image17-fs8.png) | ![Comes Furnished](plots_resized_720p/image19-fs8.png) |
+| <img src="plots/image17.png" width="460"> | <img src="plots/image19.png" width="460"> |
 
 *3.9% smoking allowed · 7.8% wheelchair accessible · 1% EV charging · 25.3% furnished*
 
@@ -169,7 +169,7 @@ In-unit washer/dryer is the most common laundry arrangement (32.7%), followed by
 
 | Laundry Options | Laundry Options (detail) |
 |---|---|
-| ![Laundry Options](plots_resized_720p/image13-fs8.png) | ![Laundry Options detail](plots_resized_720p/image14-fs8.png) |
+| <img src="plots/image13.png" width="460"> | <img src="plots/image14.png" width="460"> |
 
 ### Parking Options
 
@@ -177,7 +177,7 @@ Off-street and carport parking make up the majority of arrangements, together ac
 
 | Parking Options | Parking Options (detail) |
 |---|---|
-| ![Parking Options](plots_resized_720p/image15-fs8.png) | ![Parking Options detail](plots_resized_720p/image16-fs8.png) |
+| <img src="plots/image15.png" width="460"> | <img src="plots/image16.png" width="460"> |
 
 ---
 
